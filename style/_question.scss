@@ -1,0 +1,108 @@
+.question{
+    margin: 7rem 0rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{ 
+        line-height: 2.5rem;
+        color: $VeryDarkBlue;
+        font-weight: 500;
+        padding: 0rem 4rem;
+    }
+    p{
+        font-size: 0.9rem;
+        padding: 0.2rem 2rem;
+        color: $GrayishBlue;
+        line-height: 1.5rem;
+        padding-top: 0.5rem;
+    }
+    .question-wrapper{
+        width: 100%;
+        margin-top: 4rem;
+        text-align: start;
+        .faq{
+            margin: 0rem 2rem;
+            padding: 2rem 0rem;
+            border-bottom: 0.8px solid $GrayishBlue;
+            .question-title{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                h4{
+                    font-weight: 400;
+                }
+                svg{
+                    transition: transform 0.5s ease-in;
+                    
+                }
+                
+            }
+            .question-answer{
+                margin-top: 1.5rem;
+                display: none;
+                transition: max-height 1s ease;
+                color: $GrayishBlue;
+                line-height: 1.5rem;
+                
+            }
+            
+        }
+        .active{
+            svg{
+                transform: rotate(180deg);
+            }
+            .question-answer {
+                display: block;
+                animation: fade 1s ease-in-out;
+            }
+            @keyframes fade{
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
+            
+        }
+        
+    }
+    .more-info{
+        margin-top: 2rem;
+        
+        width: 150px;
+        color: white;
+        padding: 1rem ;
+        background-color: $SoftBlue;
+        border-radius: 0.3rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .question{
+        h2{ 
+            line-height: 2.5rem;
+            color: $VeryDarkBlue;
+            font-size: 1.5;
+            font-weight: 500;
+            padding: 0rem 4rem;
+        }
+        p{
+            width: 480px;
+            font-size: 1rem;
+            padding: 0.2rem 0rem;
+            color: $GrayishBlue;
+            line-height: 1.5rem;
+            padding-top: 0.5rem;
+        }
+        .question-wrapper{
+            width: 40%;
+        }
+    }
+}

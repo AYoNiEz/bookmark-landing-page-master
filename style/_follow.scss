@@ -1,0 +1,101 @@
+.follow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $SoftBlue;
+    padding: 4rem 2rem;
+    gap: 1rem;
+    .join{
+        color: white;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        font-weight: 500;
+    }
+    .stay{
+        text-align: center;
+        color: white;
+        font-size:1.5rem;
+        font-weight: 500;
+    }
+    .get-start{
+        margin-top: 1rem;
+        form.error input{
+            border: 2px solid hsl(0, 93%, 68%);
+        }
+        .alert{
+            color: hsl(0, 93%, 68%);
+            display: none;
+        }
+        form.error .alert{
+            display: block;
+        }
+        .email-input{
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid transparent;
+            padding-left: 1rem;
+            border-radius: 0.2rem;
+            margin-bottom: 1rem;
+        }
+        .email-input:focus{
+            border: 2px solid rgb(147, 147, 251);
+            outline: none;
+        }
+        .email-input::placeholder {
+            color: rgba(128, 128, 128, 0.392);
+            font-size: 14px;
+            
+        }
+        .btn-submit{
+            width: 100%;
+           
+            padding: 1rem;
+            font-size: 1rem;
+            color: white;
+            background-color: $SoftRed;
+            border: 2px solid transparent;
+            border-radius: 0.2rem;
+            
+            font-weight: 500;
+            cursor: pointer;
+            &:hover{
+                border: 2px solid $SoftRed;
+                background-color: white;
+                color:$SoftRed;
+            }
+        }
+        
+    }
+}
+
+@media screen and(min-width: 1000px) {
+    .follow{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5rem;
+        .join{
+            margin-bottom: 2rem;
+        }
+        .stay{
+            font-size: 2rem;
+            width: 450px;
+        }
+        .get-start{
+            
+            display: flex;
+            flex-direction: row;
+            .email-input{
+                width: 300px;
+                padding: 1rem;
+                margin-right: 1rem;
+            }
+            .btn-submit{
+                width: 150px;
+            }
+        }
+            
+    }
+}

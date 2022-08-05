@@ -1,0 +1,226 @@
+.feature{
+    text-align: center;
+    
+    h2{
+        padding: 0.5rem;
+        color: $VeryDarkBlue;
+        padding: 0rem 2rem;
+    }
+    p{
+            font-size: 0.9rem;
+            padding: 0.2rem 2rem;
+            color: $GrayishBlue;
+            line-height: 1.5rem;
+            padding-top: 0.5rem;
+    }
+    .feature-wrapper{
+        margin: 2rem 0rem;
+        .feature-select{
+            padding: 0rem 2rem;
+            .feature-box-1,.feature-box-2,.feature-box-3{
+                p{
+                    color: $VeryDarkBlue;
+                    padding: 1rem;
+                    font-size: 1rem;
+                    border: 3px solid transparent;
+                    
+                    &:hover{
+                        color: $SoftRed;
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+            
+            .box-line{
+                border-top: 0.8px solid $GrayishBlue;
+                border-bottom: 0.8px solid $GrayishBlue;
+            }
+            .active{
+                margin: 0 auto;
+                border-bottom: 3px solid $SoftRed;
+                width: 100%;
+            }
+        }
+        .bookmark-1,.bookmark-2,.bookmark-3{
+            margin-top: 5rem;
+            .bookmark-image{
+                width: 100%;
+                position: relative;
+                padding: 0rem 0.5rem;
+
+                img{
+                    width: 90%;
+                    z-index: 10;
+                }
+                .bookmark-bg{
+                    position: absolute;
+                    width: 80%;
+                    height: 190px;
+                    background-color: $SoftBlue;
+                    z-index: -1;
+                    left: 0;
+                    top: 5rem;
+                    border-top-right-radius:6rem;
+                    border-bottom-right-radius:6rem;
+                }
+            }
+            .bookmark-content{
+                margin: 5rem 0rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h2{
+                    padding: 0.5rem;
+                    font-size: 1.5rem;
+                    color: $VeryDarkBlue;
+                    padding: 0rem 2rem;
+                }
+                p{
+                    font-size: 0.9rem;
+                    padding: 0.2rem 2rem;
+                    color: $GrayishBlue;
+                    line-height: 1.5rem;
+                    padding-top: 0.5rem;
+                }
+                .bookmark-btn{
+                    margin-top: 1rem;
+                    display: none;
+                    width: 100px;
+                    color: white;
+                    padding: 1rem ;
+                    background-color: $SoftBlue;
+                    border-radius: 0.3rem;
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                }
+
+            }
+        }
+        .hide{
+            display: none;
+        }
+
+    }
+}
+
+
+@media screen and(min-width: 1000px) {
+    .feature{
+        margin-top: 10rem;
+        h2{
+            font-size: 2rem;
+        }
+        p{
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            padding: 0rem 27rem;
+            line-height: 1.7rem;
+        }
+        .feature-wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .feature-select{
+                display: flex;
+                width: 50%;
+                .feature-box-1,.feature-box-2,.feature-box-3{
+                    width: 100%;
+                    p{
+                        color: $VeryDarkBlue;
+                        padding: 1rem;
+                        font-size: 1rem;
+                        border: 3px solid transparent;
+                        
+                        &:hover{
+                            color: $SoftRed;
+                            cursor: pointer;
+                        }
+                    }
+                    
+                }
+                
+                .box-line{
+                    border-top: unset;
+                    border-bottom: 0.8px solid $GrayishBlue;
+                }
+                .box-line-2{
+                    
+                    border-bottom: 0.8px solid $GrayishBlue;
+                }
+                .active{
+                    margin: unset;
+                    border-bottom: 3px solid $SoftRed;
+                    width: 100%;
+                }
+            }
+            .bookmark-1,.bookmark-2,.bookmark-3{
+                display: flex;
+                align-items: center;
+                margin-top: unset;
+                .bookmark-image{
+                    width: 55%;
+                    position: relative;
+                    padding: 0rem 0rem;
+                    img{
+                        padding: 5rem;
+                        width: 90%;
+                        z-index: 10;
+                        float: right;
+                    }
+                    .bookmark-bg{
+                        position: absolute;
+                        width: 80%;
+                        height: 380px;
+                        background-color: $SoftBlue;
+                        z-index: -1;
+                        left: 0;
+                        top:unset;
+                        bottom: 0;
+                        border-top-right-radius:10rem;
+                        border-bottom-right-radius:10rem;
+                    }
+                }
+                .bookmark-content{
+                    width: 45%;
+                    margin: unset;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    text-align: start;
+                    margin-left: 4rem;
+                    h2{
+                        padding: 0.5rem;
+                        font-size: 1.5rem;
+                        color: $VeryDarkBlue;
+                        padding: 0rem 0rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                        padding: 0rem 0rem;
+                        color: $GrayishBlue;
+                        line-height: 1.5rem;
+                        padding-top: 0rem;
+                        padding-right: 14rem;
+                    }
+                    .bookmark-btn{
+                        text-align: center;
+                        margin-top: 2rem;
+                        display: block;
+                        width: 100px;
+                        color: white;
+                        padding: 1rem ;
+                        background-color: $SoftBlue;
+                        border-radius: 0.3rem;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                    }
+    
+                }
+            }
+            .hide{
+                display: none;
+            }
+        }
+    }
+}

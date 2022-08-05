@@ -1,0 +1,172 @@
+.header{
+    padding: 0rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    .nav-menu{
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 100;
+        background-color: hsla(229, 31%, 21%, 0.95);
+        padding: 2.4rem 2rem;
+        .nav-head{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 0.8px solid $GrayishBlue;
+            padding-bottom: 3rem;
+            .close{
+                img{
+                    transition: transform 0.5s ease;
+                    &:hover{
+                        cursor: pointer;
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+        .nav-body{
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .menu{
+                width: 100%;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    list-style: none;
+                    li{
+                        color: white;
+                        text-transform: uppercase;
+                        letter-spacing: 0.2rem;
+                        padding: 1.4rem 0rem;
+                        font-size: 1.2rem;
+                        
+                        border-bottom: 0.5px solid $GrayishBlue;
+                        &:hover{
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .login{
+                    margin-top: 1.5rem;
+                    width: 100%;
+                    text-align: center;
+                    border: 2px solid white;
+                    padding: 0.7rem;
+                    letter-spacing: 0.2rem;
+                    font-size: 1.2rem;
+                    color: white;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    border-radius: 0.3rem;
+                    &:hover{
+                        border: 2px solid $SoftRed;
+                        background-color: $SoftRed;
+                        color: $VeryDarkBlue;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .social{
+                display: flex;
+                gap: 2rem;
+                svg{
+                    &:hover path{
+                        fill: $SoftRed;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        
+    }
+    .hidden{
+        display: none;
+    }
+    
+    .hamburger{
+        cursor: pointer;
+    }
+    
+}
+
+@media screen and(min-width: 1000px) {
+    .header{
+        padding: 2rem 9rem;
+        
+        .hamburger{
+            display: none;
+        }
+        .nav-menu{
+            position: unset;
+            background-color: unset;
+            padding: unset;
+            width: unset;
+            height: unset;
+            .nav-head{
+                display: none;
+            }
+            .nav-body{
+                height: unset;
+                .social{
+                    display: none;
+                }
+                .menu{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 3rem;
+                    ul{
+                        flex-direction: row;
+                        gap: 3rem;
+                        align-items: center;
+                        li{
+                            padding: unset;
+                            border-bottom: unset;
+                            color: $VeryDarkBlue;
+                            font-size: 1rem;
+                            &:hover{
+                                color: $SoftRed;
+                                text-decoration: unset;
+                            }
+                        }
+                    }
+                    .login{
+                        margin-top: 0rem;
+                        width: 100%;
+                        text-align: center;
+                        border: 2px solid $SoftRed;
+                        background-color: $SoftRed;
+                        color: white;
+                        padding: 0.7rem 1.8rem;
+                        letter-spacing: 0.1rem;
+                        font-size: 0.7rem;
+                        
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        border-radius: 0.3rem;
+                        &:hover{
+                            border: 2px solid $SoftRed;
+                            background-color: white;
+                            color: $VeryDarkBlue;
+                            color: $SoftRed;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .hidden{
+            display: contents;
+        }
+    }
+}

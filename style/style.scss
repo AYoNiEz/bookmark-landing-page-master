@@ -1,0 +1,30 @@
+$SoftBlue: hsl(231, 69%, 60%);
+$SoftRed: hsl(0, 94%, 66%);
+
+$GrayishBlue: hsl(229, 8%, 60%);
+$VeryDarkBlue: hsl(229, 31%, 21%,);
+
+@import "header";
+@import "banner";
+@import "feature";
+@import "download";
+@import "question";
+@import "follow";
+@import "footer";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+}
+.container{
+    padding: 2.4rem 0rem 0rem;
+}
+
+@media screen and(min-width: 1000px) {
+    .container{
+        padding: unset;
+    }
+}

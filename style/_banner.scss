@@ -1,0 +1,136 @@
+.banner{
+    margin: 4rem 0rem;
+    .banner-image{
+        width: 100%;
+        position: relative;
+        padding: 0rem 0.5rem;
+        img{
+            width: 100%;
+           z-index: 10;
+        }
+        .banner-bg{
+            position: absolute;
+            width: 80%;
+            height: 190px;
+            background-color: $SoftBlue;
+            z-index: -1;
+            right: 0;
+            bottom: 0;
+            border-top-left-radius:6rem;
+            border-bottom-left-radius:6rem;
+        }
+    }
+    .banner-content{
+        padding: 3rem 2rem;
+        text-align: center;
+        h1{
+            font-size: 1.7rem;
+            line-height: 2.5rem;
+            color: $VeryDarkBlue;
+            font-weight: 500;
+        }
+        p{
+            font-size: 0.9rem;
+            padding: 0.2rem;
+            color: $GrayishBlue;
+            line-height: 1.5rem;
+            padding-top: 1rem;
+        }
+        .btn-wrapper{
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            .chrome{
+                color: white;
+                padding: 1rem ;
+                background-color: $SoftBlue;
+                border-radius: 0.3rem;
+                font-size: 0.8rem;
+                font-weight: 500;
+                box-shadow: 0px 5px 5px #ebecff;
+                border: 2px solid transparent;
+                &:hover{
+                    border: 2px solid $SoftBlue;
+                    color: $SoftBlue;
+                    background-color: white;
+                    cursor: pointer;
+                }
+            }
+            .firefox{
+                color: $VeryDarkBlue;
+                padding: 1rem ;
+                background-color: #f7f7f7;
+                border-radius: 0.3rem;
+                font-size: 0.8rem;
+                font-weight: 500;
+                box-shadow: 0px 5px 5px #ebecff;
+                border: 2px solid transparent;
+                &:hover{
+                    border: 2px solid $VeryDarkBlue;
+                    color: $VeryDarkBlue;
+                    background-color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 1000px) {
+    .banner{
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        .banner-image{
+            width: 55%;
+            position: relative;
+            padding: 0rem 0.5rem;
+            img{
+                width: 100%;
+                z-index: 10;
+            }
+            .banner-bg{
+                position: absolute;
+                width: 70%;
+                height:350px;
+                background-color: $SoftBlue;
+                z-index: -1;
+                right: 0;
+                
+                bottom: 0;
+                border-top-left-radius:10rem;
+                border-bottom-left-radius:10rem;
+            }
+        }
+        .banner-content{
+            width: 45%;
+            text-align: start;
+            margin-left: 9rem;
+            padding: unset;
+            h1{
+            font-size: 3rem;
+            line-height: 3.5rem;
+            color: $VeryDarkBlue;
+            font-weight: 500;
+            }
+            p{
+                font-size: 1.1rem;
+                padding: 0.2rem;
+                color: $GrayishBlue;
+                line-height: 2rem;
+                padding-top: 1rem;
+                padding-right: 4rem;
+            }
+            .btn-wrapper{
+                gap: 1.5rem;
+                .chrome{
+                    padding: 0.7rem 1.5rem;
+                }
+                .firefox{
+                    padding: 0.7rem 1.5rem;
+                }
+            }
+        }
+    }
+}
